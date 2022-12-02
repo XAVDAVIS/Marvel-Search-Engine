@@ -1,13 +1,3 @@
-/* const API_URL = 'https://gateway.marvel.com:443/v1/public/characters?apikey=9200aa8927151333315dbf020b137778' 
-
-$.ajax({'url': API_URL}).then(
-    (data) => {
-        console.log(data);
-    },
-    (error) => {
-    }
-)
-*/
 
 const settings = {
 	"async": true,
@@ -20,6 +10,7 @@ const settings = {
 	}
 };
 
-$.ajax(settings).done(function (response) {
+$.ajax(settings).done(function(response) {
 	console.log(response);
 });
+
