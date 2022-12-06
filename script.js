@@ -1,66 +1,58 @@
+const searchForm = document.querySelector('.app-header-search');
+let searchList = document.getElementById('search-list');
 
-// const settings = {
-// 	async: true,
-// 	crossDomain: true,
-// 	url: 'https://gateway.marvel.com:443/v1/public/characters?limit=100&apikey=9200aa8927151333315dbf020b137778',
-// 	method: "GET",
-// 	headers: {
-// 		'X-RapidAPI-Key': "b90f6f188emsh2aa3a1173653cb2p1db342jsn62cd4bffb33d",
-// 		'X-RapidAPI-Host' : "mcu-comics-and-characters.p.rapidapi.com"
-// 	}
-// };
+const getInputValue = (event) => {
+    event.preventDefault();
+    let searchText = searchForm.search.value;
+    getAllSuperHero(searchText);
+}
 
-// const URL = "https://mcu-comics-and-characters.p.rapidapi.com/mcu/characters"
+// searchForm.addEventListener('submit', getInputValue);
 
-// const url = "https://mcu-comics-and-characters.p.rapidapi.com/mcu/characters"
-/////// Elements Refered
-// const $name = $('#name');
-// const $powers = $('#powers');
-// const $input = $('input[type="text"]');
-// const $form = $('form');
+// My API Key => 3055701607906476
 
-// $.ajax(settings).done(function(response) {
-// 	console.log(response);
-// });
+// const getAllSuperHero = async(searchText) => {
+//     let url = `https://superheroapi.com/api.php/3055701607906476/search/${searchText}`;
+//     try{
+//         const response = await fetch(url);
+//         allData = await response.json();
+//         if(allData.response === 'success'){
+//             showSearchList(allData.results);
+//         }
+//         } catch(error) {
+//             console.log(error);
+//         }
+//     }
+const promise = $.ajax({
+    url : 'https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/all.json'
+});
 
-/////// Event Listeners
-// $name.on("submit", handleGetData);
-// $powers.on("submit", handleGetData);
-// $input.on("submit", handleGetData);
-//$form.on("submit", handleGetData);
-
-
-
-///////// Functions 
+promise.then(
+    (data) => {
+        console.log(data);
+    }, 
+    (error) => {
+        console.log('bad request: ', error);
+    }
+);
 
 // function handleGetData(event) {
-//      //event.preventDefault();
+//     event.preventDefault();
 //     userInput = $input.val()
-    
-//     $.ajax(settings+userInput).then( ( data ) => {
-//         console.log( data )
-//         $name.text(data.$Name)
-//         $powers.text(data.Powers)
-//     }, ( error ) => {
-//         console.log('bad request', error)
-        
-//     })
+//     $.ajax( url+userInput).then( (data) => {
+//         console.log(data)
+//         $divClass.text(data.divClass)
+//     }, (error) => {
+//         console.log('bad request', error )
+//     })       
 // }
-//  handleGetData(event);
 
-
-
-//  md5(9200aa8927151333315dbf020b137778)
-
-
-
-//  'https://gateway.marvel.com:443/v1/public/characters?limit=100&apikey=9200aa8927151333315dbf020b137778'
-
-const promise = $.ajax({
-    url:'https://superheroapi.com/api/access-token/search/name'
-})
-    promise.then((data) => {
-        console.log(data)
-    }, (error) => {
-        console.log('bad request', error)
-    })
+    // });
+    // promise.then(
+    //     (data) => {
+    //     console.log(data);
+    //     }, 
+    //     (error) => {
+    //         console.log('bad request: ', error);
+    //     }
+    // );

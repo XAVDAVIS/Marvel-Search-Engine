@@ -4,37 +4,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script defer src="script.js"></script>
-    <title>Marvel Character Search Engine</title>
+    <title>Superhero Search Engine</title>
 </head>
 <body>
-    <header>
-        <h1>Marvel Cinematic Universe Engine</h1>
-        <form>
-            <label>Marvel Character: 
-                <input type="text" placeholder="Search Here" />
-                <input type="submit" value="Search" />
-            </label>
-        </form>
+    <div class = "main-wrapper">
+        <div class = "app">
+            <!-- This is for the App Header -->
+            <div class = "app-header">
+                <h2 class = "app-header-title">Find Your SuperHero</h2>
+                <form class = "ap-header-search">
+                    <input type="text" class = "form control" placeholder="Search Here"  name = search>
+                    <button type = "submit" class = "search-btn">
+                        <i class = "fas fa-search"></i>
+                    </button>
+                    <!-- <div class = "search-list" id = "search-list">
+                        <img src = "https://e7.pngegg.com/pngimages/661/233/png-clipart-superman-superman-thumbnail.png"
+                            alt = "">
+                    </div> -->
+                </form>
+            </div>
+              <!-- End of the header  -->
+            <div class = "app-body">
+                <div class = "app-body-content">
+                        <!-- Body Thumbnail -->
+                    <div class = "app-body-content-thumbnail">
+                        <img src = "https://e7.pngegg.com/pngimages/661/233/png-clipart-superman-superman-thumbnail.png">
+                        <p></p>
+                    </div>
+                    <!-- End of Thumbnail -->
+                        <div class = "app-body-content-list">
+                            <div class = "name">Superman</div>
+                        <!-- Head for Any Tabs used -->
+                        <div class = "app-body-tabs-head">
+                            <button type = "button" class = "tab-head-single" data-id = "1">
+                                <span>Powerstats</span>
+                            </button>
+                            
+                            <button type = "button" class = "tab-head-single" data-id = "2">
+                                <span>Biography</span>
+                            </button>
 
-        <main>
-            <h3>Name</h3>
-            <p id="name"></p>
-            <p>Powers</p>
-            <p id="powers"></p>
+                            <button type = "button" class = "tab-head-single" data-id = "3">
+                                <span>Apperance</span>
+                            </button>
 
-        </main>
+                            <button type = "button" class = "tab-head-single" data-id = "4">
+                                <span>Connections</span>
+                            </button>
 
-<!--         
-        <div class="container" id="contentContainer">
-            <div class="d-flex align-items-center" id="characterSpinnerSection"></div>
-            <div class="d-flex align-items-center" id="comicsSpinnerSection"></div>
-            <section id="characterSection"></section>
-            <section id="comicSection"></section>
-          </div>    -->
+                            <button type = "button" class = "tab-head-single" data-id = "5">
+                                <span></span>
+                            </button>
 
-    </header>
+                            <button type = "button" class = "tab-head-single" data-id = "6">
+                                <span>Powerstats</span>
+                            </button>
+                        </div>
+
+                        </div>
+                </div>
+            </div>
+        </div>
 </body>
 </html>
