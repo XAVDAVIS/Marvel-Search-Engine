@@ -22,22 +22,67 @@ const getInputValue = (event) => {
 //         } catch(error) {
 //             console.log(error);
 //         }
-//     }
-const promise = $.ajax({
-    url : 'https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/all.json'
-});
 
-promise.then(
+///// Event Listeners //////
+// $.form.on('submit', handleGetData)
+
+// onst heros = (data)
+// heros.forEach((hero, i) => {
+//     let heroName = hero.name 
+// })
+
+///// ELEMENTS REF'D //////
+const $name = $('#name')
+const $apperance = $('#biography')
+const $work = $('#work')
+const $connections = $('#connections')
+const $form = $('form') 
+const $input = $( 'input[type="text"]' )
+
+
+
+        ////// CONSTANTS///////
+$.ajax({
+    url : 'https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/all.json'
+}).then(
     (data) => {
+        $name.text(data.Name);
+        $apperance.text(data.Apperance);
+        $work.text(data.Work);
+        $connections.text(data.Connections);
         console.log(data);
     }, 
     (error) => {
         console.log('bad request: ', error);
     }
 );
+let heroData;
 
-// function handleGetData(event) {
-//     event.preventDefault();
+$('form').on('submit', handleGetData);
+
+function handleGetData(event) {
+   event.preventDefault();
+   $.ajax({
+    url: 'https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/all.json'
+   }).then(
+    (data) => {
+        heroData = data;
+        render();
+    }, 
+    (error) => {
+        console.log('bad request', error);
+    }
+   );
+}
+function render() {
+    $name.text(heroData.Name);
+    $apperance.text(heroData.Apperance);
+    $work.text(heroData.Work);
+    $connections.text(heroData.Connections);
+}
+
+
+
 //     userInput = $input.val()
 //     $.ajax( url+userInput).then( (data) => {
 //         console.log(data)
