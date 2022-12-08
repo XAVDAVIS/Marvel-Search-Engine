@@ -11,8 +11,16 @@
 
 ## Screenshots 
 
-![Potentially using wireframe through invasion app]()
+image.png 
+image.png
+image.png
+
+## Getting Started
+
 
 ## Future Enhancements 
-- 
+- Add the perameters "appearance", "biography", "work", and "connections" that could be in some sort of drop down menu alongside "powerstats".
 
+- Correctly call the "images" perameter so that the user can see images of the hero they search for. 
+
+- More indepth CSS styling. 
