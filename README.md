@@ -11,12 +11,10 @@
 
 ## Screenshots 
 
-image.png 
-image.png
-image.png
 
 ## Getting Started
 
+[Click here](https://xavdavis.github.io/Marvel-Search-Engine/) to visit the deployed app!
 
 ## Future Enhancements 
 - Add the perameters "appearance", "biography", "work", and "connections" that could be in some sort of drop down menu alongside "powerstats".
