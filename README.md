@@ -1,7 +1,7 @@
 # Superhero Search Engine 
 
 ## Description
- A web app that provides questions to a user based on the Marvel Cinematic Universe movies
+ A web app that provides a user with information based on any Superhero they input.
 
 ## Technologies that were used 
 - HTML5 
