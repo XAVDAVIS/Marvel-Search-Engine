@@ -1,3 +1,44 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script defer src="script.js"></script>
+    <title>Superhero Search Engine</title>
+</head>
+
+<body>
+    <header>
+        <h1>Find Your Superhero</h1>
+    </header>
+        <form>
+            <label> Superhero Name: 
+                <input type="text" placeholder="Superhero Name"/>
+                <input type="submit" value="Get Superhero Info" />
+            </label>
+    </form>
+    <main> 
+        <h3>Name</h3>
+        <p id="name"></p>
+        <p>Appearance</p>
+        <p id="appearance"></p>
+        <p>Work</p>
+        <p id="work"></p>
+        <p>Connections</p>
+        <p id="connections"></p>
+
+        <div></div>
+    </main>
+    
+</body>
+
+</html> -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +46,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+<!--   <link rel="stylesheet" href="style.css" -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script defer src="script.js"></script>
     <title>Superhero Search Engine</title>
@@ -14,7 +56,7 @@
         <div class = "app">
             <!-- This is for the App Header -->
             <div class = "app-header">
-                <h2 class = "app-header-title">Find Your SuperHero</h2>
+                <h2 class = "app-header-title">Find Your Hero</h2>
                 <form class = "ap-header-search">
                     <input type="text" class = "form control" placeholder="Search Here"  name = search>
                     <button type = "submit" class = "search-btn">
@@ -27,12 +69,12 @@
                 <div class = "app-body-content">
                         <!-- Body Thumbnail -->
                     <div class = "app-body-content-thumbnail">
-                        <img src = "https://e7.pngegg.com/pngimages/661/233/png-clipart-superman-superman-thumbnail.png">
+                        <!-- <img src = "https://e7.pngegg.com/pngimages/661/233/png-clipart-superman-superman-thumbnail.png"> -->
                         <p></p>
                     </div>
                     <!-- End of Thumbnail -->
                         <div class = "app-body-content-list">
-                            <div class = "name">Superman</div>
+                            <div id = "name"></div>
                         <!-- Head for Any Tabs used -->
                         <div class = "app-body-tabs-head">
                             <button type = "button" class = "tab-head-single" data-id = "1">
@@ -55,9 +97,113 @@
                                 <span>Images</span>
                             </button>
                         </div>
-                     </div>
+                        <!-- /// Tabs for the body /// -->
+
+                     <div class = "app-body-tabs-body">
+
+                         <!-- //// Powerstats Tab ///// -->
+                       <ul class = "tab-body-single powerstats">
+                        <li>
+                            <div >
+                            intelligence: <span id="intelligence"></span> 
+                            </div>
+                        </li>
+                        <li> 
+                            <div>
+                               speed: <span id="speed"></span>
+                            </div>
+                            
+                        </li>
+                        <li>
+                            <div>
+                                <span>durability</span>
+                            </div>
+                            <span>100</span>
+                        </li>
+                        <li>
+                            <div>
+                                <span>power</span>
+                            </div>
+                            <span>100</span>
+                        </li>
+                        <li>
+                            <div>
+                                <span>combat</span>
+                            </div>
+                            <span>100</span>
+                        </li>
+                       </ul>
+                       <!-- /// End of powerstats//// -->
+                        </div>
+                       <!-- //// Start of Biography Tab ///// -->
+                     
+                            <ul class = "tab-body-single biography">
+                                <li>
+                                    <span>full name</span>
+                                    <span>clark kent</span>
+                                </li>
+                                <li>
+                                    <span>alterEgos</span>
+                                    <span>XXXXXXXXXX</span>
+                                </li>
+                                <li>
+                                    <span>aliases</span>
+                                    <span>XXXXXXXXXX</span>
+                                </li>
+                                <li>
+                                    <span>placeOfBirth</span>
+                                    <span>XXXXXXXXX</span>
+                                </li>
+                                <li>
+                                    <span>firstApperance</span>
+                                    <span>XXXXXXXX</span>
+                                </li>
+                                <li>
+                                    <span>publisher</span>
+                                    <span>XXXXXXXXX</span>
+                                </li>
+                                <li>
+                                    <span>alignment</span>
+                                    <span>XXXXXXXX</span>
+                                </li>
+                            </ul>
+                            <!-- ///// End of Biography ///// -->
+
+                            <!-- ///// Start of Appearance ///// -->
+
+                            <ul class = "tab-body-single appearance">
+                                <li>
+                                    <span>gender</span>
+                                    <span>male/female</span>
+                                </li>
+                                <li>
+                                    <span>race</span>
+                                    <span>XXXXXX</span>
+                                </li>
+                                <li>
+                                    <span>height</span>
+                                    <span>XXXXXXXX</span>
+                                </li>
+                                <li>
+                                    <span>weight</span>
+                                    <span>XXXXXXXX</span>
+                                </li>
+                                <li>
+                                    <span>eyeColor</span>
+                                    <span>XXXXXXXX</span>
+                                </li>
+                                <li>
+                                    <span>hairColor</span>
+                                    <span>XXXXXXXX</span>
+                                </li>
+                            </ul>
+                                <!-- //// End of Appearance ///// -->
+                            
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
 </body>
 </html>
