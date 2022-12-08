@@ -1,4 +1,4 @@
-# Marvel Trivia App 
+# Superhero Search Engine 
 
 ## Description
  A web app that provides questions to a user based on the Marvel Cinematic Universe movies
