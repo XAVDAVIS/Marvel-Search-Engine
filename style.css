@@ -82,7 +82,7 @@ outline: 0;
 }
 
 .app-header-search {
-    border: 2px solid var(--grey-color);
+    border: 20px solid var(--grey-color);
     border-radius: 3rem;
 
 }

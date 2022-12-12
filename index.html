@@ -16,8 +16,8 @@
             <!-- This is for the App Header -->
             <div class = "app-header">
                 <h2 class = "app-header-title">Find Your Hero</h2>
-                <form class = "ap-header-search">
-                    <input type="text" class = "form control" placeholder="Search Here"  name = search>
+                <form class = "app-header-search">
+                    <input type="text" class = "form control" placeholder="Search For Your Hero"  name = search>
                     <button type = "submit" class = "search-btn">
                         <i class = "fas fa-search"></i>
                     </button>  
@@ -27,22 +27,23 @@
                 <div class = "app-body">
                     <div class = "app-body-content">
                         <!-- Body Thumbnail -->
-                    <div class = "app-body-content-thumbnail">
+                   <div class = "app-body-content-thumbnail">
                         <!-- <img src = "https://e7.pngegg.com/pngimages/661/233/png-clipart-superman-superman-thumbnail.png"> -->
-                        <p></p>
                     </div>
                     <!-- End of Thumbnail -->
+
                         <div class = "app-body-content-list">
                             <div id = "name"></div>
+
                         <!-- Head for Any Tabs used -->
-                        <div class = "app-body-tabs-head">
+                        <div id = "app-body-tabs-head">
                             <button type = "button" class = "tab-head-single" data-id = "1">
                                 <span>Powerstats</span>
                             </button>
                             
-                            <!-- <button type = "button" class = "tab-head-single" data-id = "2">
+                            <button type = "button" class = "tab-head-single" data-id = "2">
                                 <span>Biography</span>
-                            </button>
+                            </button> 
 
                             <button type = "button" class = "tab-head-single" data-id = "3">
                                 <span>Apperance</span>
@@ -50,43 +51,76 @@
 
                             <button type = "button" class = "tab-head-single" data-id = "4">
                                 <span>Connections</span>
-                            </button>
+                            </button> 
 
-                            <button type = "button" class = "tab-head-single" data-id = "5">
+                            <!-- <button type = "button" class = "tab-head-single" data-id = "5">
                                 <span>Images</span>
-                            </button> -->
+                            </button>  -->
                         </div>
+                
                         <!-- /// Tabs for the body /// -->
-
-                     <div class = "app-body-tabs-body">
+                    <div class = "app-body-tabs-body">
 
                          <!-- //// Powerstats Tab ///// -->
                        <ul class = "tab-body-single powerstats">
                             <li>
-                                <div >
-                                intelligence: <span id="intelligence"></span> 
+                                <div>
+                                    intelligence: <span id="intelligence"></span> 
                                 </div>
                             </li>
                             <li> 
                                 <div>
-                                speed: <span id="speed"></span>
+                                    speed: <span id="speed"></span>
                                 </div>
                             </li>
-
-                            <!-- <li>
-                                <div>
-                                durability: <span id="durability"></span>
-                                </div>
-                            
-                            </li> -->
                             <li>
                                 <div>
-                                power: <span id="power"></span>
+                                    power: <span id="power"></span>
                                 </div>
                             </li>
-                        </ul>
+                            <li>
+                                <div>
+                                    durability: <span id="durability"></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    combat: <span id="combat"></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    strength: <span id="strength"></span>
+                                </div>
+                            </li>
                                 <!-- /// End of powerstats//// -->
+                            
+                               <!-- /// Beginning of Biography Tab /// -->
 
+                        <ul class = "tab-body-single biography">
+                            <li>
+                                <div>
+                                    full name: <span id="full-name"></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    alter egos: <span id="alter-egos"></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    aliases: <span id="aliases"></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    place of birth: <span id="place-of-birth"></span>
+                                </div>
+                            </li>
+            
+                         </ul>
+                        
                         </div>
                     </div>
                 </div>
