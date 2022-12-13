@@ -11,6 +11,7 @@
 
 ## Screenshots 
 
+![App Screenshot](https://raw.githubusercontent.com/XAVDAVIS/Superhero-Search-Engine/master/Screenshot%202022-12-13%20at%205.49.06%20PM.png)
 
 ## Getting Started
 
