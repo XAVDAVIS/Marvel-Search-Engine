@@ -21,7 +21,7 @@ font-size:  10px;
 
 .tab-head-single {
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 5px;
     position: relative;
     font-weight: 500;
     font-size: 1.9rem;
@@ -121,3 +121,13 @@ outline: 0;
     -webkit-box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.5);
             box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.5);
 }
+/* 
+.powerstats li div span {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 7px;
+    padding: 0 1.2rem;
+    margin: 0 1.6rem;
+    opacity: 0.6;
+    font-size: 1.7rem;
+} */

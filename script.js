@@ -24,6 +24,14 @@ const $connections = $( '#connections' )
 const $form = $('form') 
 const $input = $( 'input[type="text"]' )
 
+///// APPEARANCE CONSTANTS /////
+
+const $gender = $( '#gender' )
+const $race = $( '#race' )
+const $height = $( '#height' )
+const $weight = $( '#weight' )
+
+
 let heros = []
 $.ajax( URL ).then (data => {
     heros = data 
@@ -50,6 +58,12 @@ function handleGetData(event) {
     $alteregos.text(result.biography.alterEgos);
     $aliases.text(result.biography.aliases);
     $placeofbirth.text(result.biography.placeOfBirth);
+
+    $gender.text(result.appearance.gender);
+    $race.text(result.appearance.race);
+    $height.text(result.appearance.height);
+    $weight.text(result.appearance.weight);
+
 
     console.log(result);
     // document.querySelector('.app-body-content-thumbnail').innerHTML = `<img src ="${heros.image.URL}">`;
