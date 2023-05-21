@@ -59,12 +59,15 @@ function handleGetData(event) {
     $aliases.text(result.biography.aliases);
     $placeofbirth.text(result.biography.placeOfBirth);
 
+<<<<<<< HEAD
     $gender.text(result.appearance.gender);
     $race.text(result.appearance.race);
     $height.text(result.appearance.height);
     $weight.text(result.appearance.weight);
 
 
+=======
+>>>>>>> 2657378127151d5ae1454b41c7fed1cbe4ba9949
     console.log(result);
     // document.querySelector('.app-body-content-thumbnail').innerHTML = `<img src ="${heros.image.URL}">`;
 }
