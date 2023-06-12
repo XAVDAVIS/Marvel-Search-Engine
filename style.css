@@ -4,32 +4,187 @@
     --poppins-font: 'Poppins', sans-serif;
     --dark-color: #0a0a0a;
     --red-color: #f64445;
-    /* --light-color: #fff; */
+    --light-color: #fff;
     --grey-color: #505050;
     --yellow-color: #f2c10e;
 }
-/* *{
+*{
     padding: 0;
     margin: 0;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-} */
+}
 html {
-font-size:  10px;
+    font-size:  10px;
 
 }
+body{
+    font-size: 1.7rem;
+    min-height: 100vh;
+    background: var(--red-color);
+    background: -o-linear-gradient(281deg, #f64445 0%, #611cac 100%);
+    background: linear-gradient(169deg, #f64445 0%, #611cac 100%);
+    line-height: 1.6;
+    font-family: var(--poppins-font);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    -webkit-box-pack: stretch;
+        -ms-flex-pack: stretch;
+            justify-content: stretch;
+}
+button, input{
+    font-family: inherit;
+    font-size: 1.8rem;
+    outline: 0;
+    border: none;
+    background-color: transparent;
+}
+li {
+    list-style-type: none;
+}
+img{
+    width: 100%;
+    display: block;
+}
+.main-wrapper{
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+.app {
+    background-color: var(--dark-color);
+    margin: 2rem;
+    padding: 5rem;
+    border-radius: 6px;
+    color: white;
+    -webkit-box-shadow: 0px 5px 11px 0px rgba(0, 0, 0, 0.5);
+            box-shadow: 0px 5px 11px 0px rgba(0, 0, 0, 0.5);
+}
+.app-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+.app-header-title span {
+    color: var(--red-color);
+}
+.app-header-search {
+    border: 2px solid var(--grey-color);
+    border-radius: 3rem;
+    padding: 1rem 2rem;
+    position: relative;
+}
+.app-header-search .form-control {
+    min-width: 420;
+    color: white;
+}
+.app-header-search .search-btn {
+    color: var(--grey-color);
+    font-size: 2.3rem;
+    cursor: pointer;
+}
+/* SEARCH LIST FOR HEROES */
 
+.search-list {
+    z-index: 10;
+    position: absolute;
+    top: calc(100% + 1rem);
+    left: 0;
+    background-color: var(--light-color);
+    width: 100%;
+    max-height: 400px;
+    overflow-y: scroll;
+}
+.search-list::-webkit-scrollbar {
+    width: 7px;
+}
+.search-list::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px black;
+            box-shadow: inset 0 0 6px black;
+}
+.search-list::-webkit-scrollbar-thumb {
+    background-color: var(--red-color);
+    border-radius: 5px;
+}
+.search-list-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    background-color: var(--dark-color);
+    padding: 0.4rem 0;
+}
+.search-list-item img {
+    width: 50px;
+    margin-right: 2rem;
+}
+.search-list-item p {
+    font-weight: 700;
+    cursor: pointer;
+}
+/* APP BODY CSS  */
+
+.app-body {
+    margin-top: 4rem;
+    height: 600px;
+    overflow-y: scroll;
+}
+.app-body::-webkit-scrollbar {
+    width: 7px;
+}
+.app-body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px black;
+            box-shadow: inset 0 0 6px black;
+}
+.app-body::-webkit-scrollbar-thumb {
+    background-color: var(--red-color);
+    border-radius: 5px;
+}
+
+/* APP BODY TABS HEAD  */
+
+.app-body-tabs-head {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    padding-bottom: 1.6rem;
+    margin: 2.4rem 0;
+}
+/* (Powerstats Biography Appearance Connections TABS) */
 .tab-head-single {
     text-transform: uppercase;
-    letter-spacing: 5px;
+    letter-spacing: 1px;
     position: relative;
     font-weight: 500;
     font-size: 1.9rem;
-    color: #000000;
+    color: white;
     cursor: pointer;
     -webkit-transition: all 300ms ease-in-out;
     -o-transition: all 300ms ease-in-out;
     transition: all 300ms ease-in-out;
+}
+.tab-head-single:hover {
+    opacity: 0.9;
 }
 .tab-head-single.active-tab::after {
     content: "";
@@ -40,75 +195,34 @@ font-size:  10px;
     height: 4px;
     background-color: var(--red-color);
 }
+
+/* APP BODY CONTENT  () */
+
 .app-body-content {
     display: grid;
     grid-template-columns: 2fr 3fr;
     -webkit-column-gap: 4rem;
-       -moz-column-gap: 4rem;
+        -moz-column-gap: 4rem;
             column-gap: 4rem;
     margin-right: 2rem;
 }
-body {
-    font-family: var(--poppins-font);
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: stretch;
-    line-height: 1.5;
-    min-height: 100vh;
-    background: var(--red-color);
-}
-button, input {
-font-family: Verdana, Geneva, Tahoma, sans-serif;
-background-color: transparent;
-border: none;
-outline: 0;
-}
-.main-wrapper {
-    max-width: 1000px;
-    margin: 0 auto;
-    width: 100%
-}
-/* .app {
-    background-color: var(--dark-color);
-    margin: 2rem;
+.app-body-content-thumbnail {
+    width: 100%;
     border-radius: 6px;
-    -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
-            box-shadow: opx 5px 10px 0px rgba(0, 0, 0, 0.5);
-} */
-
-.app-header-title span {
-    color: var(--red-color);
+    overflow: hidden;
 }
-
-.app-header-search {
-    border: 20px solid var(--grey-color);
-    border-radius: 3rem;
-
-}
-.app-body-tabs-head {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-    border-radius: 2px;
-    padding-bottom: 2rem;
-    margin: 2.4rem 0;
-}
-
-.tab-head-single{
-    /* //// Makes all CAPS ///// */
+.app-body-content-list .name {
     text-transform: uppercase;
-    letter-spacing: 1px;
-    position: relative;
-    font-weight: 100;
-    font-size: 20px;
-    color: #fff;
-    cursor: pointer;
-    -webkit-transition: all 300ms ease-in-out;
-    -o-transition: all 300ms ease-in-out;
-    transition: all 300ms ease-in-out;
+    letter-spacing: 2px;
+    font-size: 3.4rem;
+    font-weight: 500;
+    margin-top: -1.2rem;
 }
+.app-body-tabs-body {
+    margin-top: 3.6rem;
+}
+
+/* POWERSTATS TAB  */
 .powerstats li{
     display: -webkit-box;
     display: -ms-flexbox;
@@ -118,11 +232,14 @@ outline: 0;
             justify-content: space-between;
     margin: 1.2rem auto;
     padding: 1.2rem;
-    -webkit-box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.5);
-            box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 5px 7px 0 black;
+            box-shadow: 0 5px 7px 0 black;
 }
-<<<<<<< HEAD
-/* 
+/* shields icon color  */
+.powerstats li div i {
+    color: var(--red-color);
+}
+
 .powerstats li div span {
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -131,6 +248,22 @@ outline: 0;
     margin: 0 1.6rem;
     opacity: 0.6;
     font-size: 1.7rem;
-} */
-=======
->>>>>>> 2657378127151d5ae1454b41c7fed1cbe4ba9949
+}
+/* powerstats results color */
+.powerstats li > span {
+    color: var(--yellow-color);
+    font-weight: 700;
+}   
+
+/* BIOGRAPHY TAB  */
+.biography {
+    display: none;
+}
+.biography li {
+    margin: 3.4rem 0;
+}
+.biography li span {
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 1.9rem;
+}
